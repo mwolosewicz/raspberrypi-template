@@ -4,6 +4,8 @@ This project serves as a versatile template for building applications on Raspber
 
 **Static Linking of Libraries:** All libraries used in this project are statically linked. This means there is no need to install any libraries on the target system, effectively avoiding issues related to missing dynamic libraries or discrepancies in their versions. This approach ensures that the application runs smoothly across different environments without additional configuration.
 
+## Prerequisites
+* Podman Installation: Ensure that Podman is installed on your system. This is essential for creating the build environment.
 
 ## Simple build:
 ```
@@ -22,9 +24,6 @@ Then use `scp` to copy binary `build/gpio_scanner` into the target device.
 * Direct Compilation on Linux: For Linux users, a build.sh script is provided for direct compilation.
 * GPIO Operations: Integrates libgpiod for managing GPIO operations from userspace.
 * Logging: Incorporates spdlog to enable efficient logging of application behavior.
-
-## Prerequisites
-* Podman Installation: Ensure that Podman is installed on your system. This is essential for creating the build environment.
 
 ## Setup for Native Compilation
 For native compilation, particularly on Linux, you must install the packages defined in the Dockerfile. This ensures that all necessary dependencies are correctly set up in your local environment.
